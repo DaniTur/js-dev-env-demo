@@ -1,4 +1,4 @@
-import {getUsers} from './api/usersApi';
+import {getUsers} from './api/userApi';
 
 // Populate table of users via API call.
 
