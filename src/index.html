@@ -1,6 +1,14 @@
+<!--
+    **NOTE** This is a template for index.html
+    It uses ejs and htmlWebpack plugin to generate a different index.html for each environment.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <% if (htmlWebpackPlugin.options.trackJSToken) { %>
+    <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+    <script>window.TrackJS && TrackJS.install({token: '<%=htmlWebpackPlugin.options.trackJSToken%>'});</script>    
+    <% } %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
